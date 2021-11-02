@@ -1,13 +1,13 @@
 import React from 'react';
-import MainHead from './MainHead';
 import '../style/Background_style.css';
 
-function Main() {
+function Main({ children }) {
+
   return (
-    <div className="main_ground">
-    <MainHead></MainHead>
-    </div>
-  );
+    <div>
+
+    <div className="main_ground">{children}</div>
+    </div>);
 }
 
 export default Main;
