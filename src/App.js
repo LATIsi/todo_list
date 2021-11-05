@@ -3,7 +3,7 @@ import './App.css';
 import Main from './component/Main';
 import './style/Background_style.css';
 import './style/Line_style.css';
-
+//, "homepage":"http://LATIsi.github.io/todo_list"
 
 function App() {
   return (
