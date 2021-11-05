@@ -2,14 +2,14 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { BiCheck} from 'react-icons/bi';
 import { RiDeleteBin6Line } from 'react-icons/ri';
+import '../style/Line_style.css';
 
 const Remove = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  
   color: #dee2e6;
   font-size: 24px;
+  margin-left:3vw;
   cursor: pointer;
   &:hover {
     color: #ff6b6b;
@@ -18,13 +18,16 @@ const Remove = styled.div`
 `;
 
 const TodoItemBlock = styled.div`
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   padding-top: 0.5vw;
-  width:50vw;
-  padding-bottom: 0.5vw;
+  width:70vw;
+  padding-bottom: 1vw;
+  margin-top:1vh;
   position:relative;
   left:2vw;
+  margin-right:5vw;
   &:hover {
     ${Remove} {
       display: initial;
@@ -52,14 +55,19 @@ const CheckCircle = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 21px;
+  flex-basis: 55vw;
+  font-size: 20px;
+  text-align: left;
+  word-break:break-all;
   color: #495057;
+  padding-bottom:1vh;
   ${props =>
     props.done &&
     css`
       color: #ced4da;
     `}
 `;
+
 
 function TodoItem({ id, done, text , Line}) {
   return (

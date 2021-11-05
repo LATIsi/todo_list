@@ -3,33 +3,52 @@ import styled, { css } from 'styled-components';
 import { MdAdd } from 'react-icons/md';
 
 const CircleButton = styled.button`
-  background: #38d9a9;
-  &:hover {
-    background: #63e6be;
-  }
-  &:active {
-    background: #20c997;
-  }
-
-  z-index: 5;
+  z-index: 2;
+  background: transparent;
   cursor: pointer;
-  width: 80px;
-  height: 80px;
-  display: block;
+  width: 5.5vw;
+  height: 12vh;
   align-items: center;
   justify-content: center;
   font-size: 60px;
-  position: absolute;
-  left: 50%;
-  bottom: 0px;
+  position: fixed;
+  bottom: 20vh;
+  left:7vw;
   transform: translate(-50%, 50%);
   color: white;
   border-radius: 50%;
   border: none;
   outline: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
+  transition: 0.125s all ease-in;
+  ${props =>
+    props.open &&
+    css`
+      transform: translate(-50%, 50%) rotate(45deg);
+    `}
+`;
+
+const Circle = styled.button`
+background: #4BC6D7;
+cursor: pointer;
+width:6vw;
+height: 36.5vh;
+left:6vw;
+margin-left:-1.8vw;
+bottom: -10vh;
+z-index: 1;
+  position: fixed;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 3vw;
+  border: none;
+  outline: none;
+  &:hover {
+    background: #63e6be;
+  }
+  &:active {
+    background: #20c997;
+  }
 
   transition: 0.125s all ease-in;
   ${props =>
@@ -43,33 +62,43 @@ const CircleButton = styled.button`
         background: #fa5252;
       }
       transform: translate(-50%, 50%) rotate(45deg);
+      
     `}
 `;
-
 const InsertFormPositioner = styled.div`
   width: 100%;
+  height: 26vh;
   bottom: 0;
-  left: 0;
-  position: absolute;
+  left:8vw;
+  position: fixed;
+  background-color:#f8f9fa;
+`;
+
+const InsertFormbg = styled.div`
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background: rgba(0, 0, 0, 0.3);
+  position:fixed;
+  
 `;
 
 const InsertForm = styled.form`
   background: #f8f9fa;
-  padding-left: 32px;
-  padding-top: 32px;
-  padding-right: 32px;
-  padding-bottom: 72px;
-
+  height: 26vh;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   border-top: 1px solid #e9ecef;
 `;
 
 const Input = styled.input`
-  padding: 12px;
+  padding: 1vw;
+  margin-left:-5vw;
+  margin-top:8vh;
   border-radius: 4px;
   border: 1px solid #dee2e6;
-  width: 100%;
+  width: 70vw;
   outline: none;
   font-size: 18px;
   box-sizing: border-box;
@@ -83,15 +112,18 @@ function TodoCreate() {
   return (
     <>
       {open && (
+        <InsertFormbg>
         <InsertFormPositioner>
           <InsertForm>
             <Input autoFocus placeholder="할 일을 입력 후, Enter 를 누르세요" />
           </InsertForm>
         </InsertFormPositioner>
+       </InsertFormbg>
       )}
       <CircleButton onClick={onToggle} open={open}>
         <MdAdd />
       </CircleButton>
+      <Circle/>
     </>
   );
 }
