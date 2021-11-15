@@ -28,13 +28,19 @@ https://react.vlpt.us/mashup-todolist/01-create-components.html
 
 # 21.10.28
 doto-list관련 웹-앱디자인을 figma로 기획했습니다.
+
 ( 링크에서 확인 가능합니다. 그러나 무료계정이기에 다른사람이 수정할 수 있음으로 figgam으로 복사하였습니다.)
 
 # 21.11.02
 기본적으로 화면비율을 맞추기위해 vh,vw으로 기획했습니다. react-icons 라이브러리를 설치했습니다. (TodoItem, 리스트 체크와 삭제관련)
 
 # 21.11.03
-styled-components 라이브러리를 사용하여 일부분의 js안에 css를 삽입했습니다. 21.11.05 to-do list 작성시, 일정 문자수 초과시 다음줄로 내려받게 조정했습니다. to-do 항목이 많으면 스크롤되게 조정했습니다. (css의 webkit-scrollbar로 커스텀 스크롤바를 만들었습니다)
+styled-components 라이브러리를 사용하여 일부분의 js안에 css를 삽입했습니다.
+
+# 21.11.05
+to-do list 작성시, 일정 문자수 초과시 다음줄로 내려받게 조정했습니다.
+to-do 항목이 많으면 스크롤되게 조정했습니다.
+(css의 webkit-scrollbar로 커스텀 스크롤바를 만들었습니다)
 
 # 21.11.06
 웹 css 완성 / gh-pages로 페이지를 만들고 다른 모니터로 테스트
@@ -48,15 +54,16 @@ css 부분에서 create 버튼의 영역을 애니메이션으로 전환시키�
 
 # 21.11.14
 ContextAPI 관련 들어가기
-useRef 관련 참고를 하여 배열의 고유값인 id값을 고유값id로인 nextid로 조정했습니다.
+useRef 관련 참고를 하여 배열의 고유값인 id값을 nextid로 조정했습니다.
 https://yoonjong-park.tistory.com/entry/React-useRef-%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80
 
 ContextAPI의 나 자신이 헷갈리지않게 설명부분을 추가했습니다.
-74번째 줄 중요.
-//1. 만약 useTodoState,dispatch,nextID가
-//APP.js에서 요소들이 TodoUseContext 로 감싸져있지 않다면 에러를 발생시키도록 if문 처리
-//2. 외부에서 호출하는건 먼저 app에서 TodoUseContext로 감쌌으니
-//이 밑의 useTodo~의 이름을 가진 useContext들을 원하는곳에 호출가능.
+
+<b>74번째 줄 중요.</b>
+1. 만약 useTodoState,dispatch,nextID가
+APP.js에서 요소들이 TodoUseContext 로 감싸져있지 않다면 에러를 발생시키도록 if문 처리
+2. 외부에서 호출하는건 먼저 app에서 TodoUseContext로 감쌌으니
+이 밑의 useTodo~의 이름을 가진 useContext들을 원하는곳에 호출가능.
 
 # 21.11.15
 MainHead에서 오늘 날짜를 불러오는것은 
