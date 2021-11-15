@@ -7,7 +7,6 @@ import List from './component/List';
 import MainHead from './component/MainHead';
 import TodoCreate from './component/Todocreate';
 import { TodoUseContext } from './component/Context';
-//, "homepage":"http://LATIsi.github.io/todo_list"
 
 function App() {
   return (

@@ -59,6 +59,7 @@ https://yoonjong-park.tistory.com/entry/React-useRef-%EB%8A%94-%EC%96%B8%EC%A0%9
 
 ContextAPI의 나 자신이 헷갈리지않게 설명부분을 추가했습니다.
 
+
 <b>74번째 줄 중요.</b>
 1. 만약 useTodoState,dispatch,nextID가
 APP.js에서 요소들이 TodoUseContext 로 감싸져있지 않다면 에러를 발생시키도록 if문 처리

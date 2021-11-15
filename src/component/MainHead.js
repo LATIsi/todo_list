@@ -6,6 +6,7 @@ import { useTodoState } from './Context';
 function MainHead() {
   const todos = useTodoState();
   const undoneCount = todos.filter(todo => !todo.done);
+  
   console.log(todos); //context에 있는 배열들을 불러옴
   console.log(undoneCount); //context에 있는 배열을 filter로 done이 아닌 애들을 넣어줌
 

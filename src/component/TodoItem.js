@@ -71,6 +71,7 @@ const Text = styled.div`
 
 
 function TodoItem({ id, text, done}) {
+  //수정해야함..
   const dispatch = useTodoDispatch();
   const onToggle = () => dispatch({ type: 'TOGGLE', id });
   const onRemove = () => dispatch({ type: 'REMOVE', id });

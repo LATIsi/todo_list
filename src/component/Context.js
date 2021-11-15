@@ -31,7 +31,6 @@ const initialTodos = [
     text: '리스트6',
     done: false
   }
-  
 ];
 
 const TodoState = createContext();
