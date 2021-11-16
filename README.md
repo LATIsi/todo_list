@@ -76,7 +76,7 @@ http://www.devdic.com/javascript/refer/native/method:1285/toLocaleDateString()
 react-live-clock( 현재 시간 불러오기 )를 하려고했으나,, 간단하게 가져오기위해 JS 내장함수인 date와 toLocaleDateString를 사용해 가져왔습니다.
 
 # 21.11.16
--- todoitem과 create 관련 기능 완성하기.
+-- todoitem의 선택과 삭제기능 완성.
 
 # 21.11.17
 -- css 다뤄보기.

@@ -2,8 +2,23 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { BiCheck} from 'react-icons/bi';
 import { RiDeleteBin6Line } from 'react-icons/ri';
+import { BsPencil } from 'react-icons/bs';
 import '../style/Line_style.css';
 import { useTodoDispatch } from './Context';
+
+
+const TodoUpdate = styled.div`
+  display: flex;
+  align-items: center;
+  color: #dee2e6;
+  font-size: 24px;
+  margin-left:1vw;
+  cursor: pointer;
+  &:hover {
+    color: #ff6b6b;
+  }
+  display: none;
+`;
 
 const Remove = styled.div`
   display: flex;
@@ -17,6 +32,7 @@ const Remove = styled.div`
   }
   display: none;
 `;
+
 
 const TodoItemBlock = styled.div`
   flex-wrap: wrap;
@@ -56,7 +72,7 @@ const CheckCircle = styled.div`
 `;
 
 const Text = styled.div`
-  flex-basis: 55vw;
+  flex-basis: 50vw;
   font-size: 20px;
   text-align: left;
   word-break:break-all;
@@ -75,10 +91,17 @@ function TodoItem({ id, text, done}) {
   const dispatch = useTodoDispatch();
   const onToggle = () => dispatch({ type: 'TOGGLE', id });
   const onRemove = () => dispatch({ type: 'REMOVE', id });
+  const onUpdate = () => dispatch({ type: 'UPDATE', id });
+  
   return (
     <TodoItemBlock>
-      <CheckCircle done={done} onClick={onToggle} >{done && <BiCheck /> }</CheckCircle>
+      <CheckCircle done={done} onClick={onToggle} >
+        {done && <BiCheck /> }
+      </CheckCircle>
       <Text done={done}>{text}</Text>
+      <TodoUpdate onClick={onUpdate}>
+        <BsPencil/>
+      </TodoUpdate>
       <Remove onClick={onRemove}>
         <RiDeleteBin6Line />
       </Remove>

@@ -49,6 +49,8 @@ function todoReducer(state, action) {
       );
     case 'REMOVE':
       return state.filter(List => List.id !== action.id);
+    case 'UPDATE':
+    return state.filter(List => List.id !== action.id);
     default:
       throw new Error(`액션타입이 없음: ${action.type}`);
   }
