@@ -76,10 +76,17 @@ http://www.devdic.com/javascript/refer/native/method:1285/toLocaleDateString()
 react-live-clock( 현재 시간 불러오기 )를 하려고했으나,, 간단하게 가져오기위해 JS 내장함수인 date와 toLocaleDateString를 사용해 가져왔습니다.
 
 # 21.11.16
--- todoitem의 선택과 삭제기능 완성.
+todoitem의 삭제기능 완성.
+
+목록 추가 (create) 부분에서 onSubmit의 dispatch에 추가하면 심각한 오류가 생겨
+https://velog.io/@velopert/typescript-context-api
+를 참고하였습니다.
+
+id와 done을 멀쩡히 추가했지만 text부분이 undefined로 뜨는 오류 발견
+concat으로 복사하여 추가하였지만, id값이 객체로 저장되어 key값도 같이 겹치는 상황발생
 
 # 21.11.17
--- css 다뤄보기.
+-- 모바일 css 다뤄보기.
 
 
 # 기본기능이 있는 todo_list를 완성 뒤에 해야할것

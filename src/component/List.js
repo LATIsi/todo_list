@@ -4,17 +4,19 @@ import TodoItem from './TodoItem';
 import { useTodoState } from './Context';
 
 function List() {
-  const todoList = useTodoState();
+  const todos = useTodoState();
+  console.log('List Here');
+
   return (
       <div className="list">
-       {todoList.map(todo => (
-        <TodoItem
-        key={todo.id} 
-        id={todo.id} 
-        text={todo.text} 
-        done={todo.done} 
-       /> 
-      ))}
+         {todos.map(todo => (
+              <TodoItem
+              key={todo.id}
+              id={todo.id}
+              text={todo.text}
+              done={todo.done}
+            />
+           ))}
       </div>
   );
 }

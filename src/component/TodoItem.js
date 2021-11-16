@@ -85,7 +85,7 @@ const Text = styled.div`
     `}
 `;
 
-
+console.log('TodoItem Here');
 function TodoItem({ id, text, done}) {
   //수정해야함..
   const dispatch = useTodoDispatch();

@@ -5,7 +5,7 @@ import './style/Background_style.css';
 import './style/Line_style.css';
 import List from './component/List';
 import MainHead from './component/MainHead';
-import TodoCreate from './component/Todocreate';
+import TodoCreate from './component/TodoCreate';
 import { TodoUseContext } from './component/Context';
 
 function App() {

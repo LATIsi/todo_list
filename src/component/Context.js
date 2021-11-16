@@ -1,4 +1,4 @@
-import React, { useReducer, createContext, useContext, useRef } from 'react';
+import React, { useReducer, createContext, useContext, useRef} from 'react';
 
 const initialTodos = [
   {
@@ -37,22 +37,32 @@ const TodoState = createContext();
 const TodoDispatch = createContext();
 const TodoNextId = createContext();
 
-
+console.log('Context Here');
  //initialState안의 항목들...-> List. map이나 concat이나 filter로 풀어줌!
 function todoReducer(state, action) {
   switch (action.type) {
     case 'CREATE':
-      return state.concat(action.List);
+      return state.concat(action.todo);
+      //아래의 것으로 했다가... text부분이 공백으로 들어와 실패
+      // const nextId = Math.max(...state.map(todo => todo.id)) + 1;
+      // console.log(` Context에서 입력받은 id의 값은 ${nextText}`);
+      // return state.concat({
+      //   id: nextId,
+      //   text: nextText,
+      //   done: false
+      // });
     case 'TOGGLE':
       return state.map(List =>
         List.id === action.id ? { ...List, done: !List.done } : List
       );
     case 'REMOVE':
       return state.filter(List => List.id !== action.id);
+
     case 'UPDATE':
     return state.filter(List => List.id !== action.id);
+    
     default:
-      throw new Error(`액션타입이 없음: ${action.type}`);
+      throw new Error(`해당하는 액션타입이 없음: ${action.type}`);
   }
 }
 
