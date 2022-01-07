@@ -18,6 +18,16 @@ const TodoUpdate = styled.div`
     color: #ff6b6b;
   }
   display: none;
+    
+      @media screen and (max-width: 750px) {
+        font-size: 4vh;
+        margin-left:2.5vw;
+       }
+       
+       @media screen and (max-width: 499px) {
+        margin-top:1vh;
+        font-size: 3vh;
+      }
 `;
 
 const Remove = styled.div`
@@ -31,6 +41,16 @@ const Remove = styled.div`
     color: #ff6b6b;
   }
   display: none;
+
+      @media screen and (max-width: 750px) {
+        margin-left:3vw;
+        font-size: 4vh;
+    }
+
+    @media screen and (max-width: 499px) {
+      margin-top:1vh;
+      font-size: 3vh;
+    }
 `;
 
 
@@ -49,7 +69,15 @@ const TodoItemBlock = styled.div`
     ${Remove} {
       display: initial;
     }
+    ${TodoUpdate} {
+      display: initial;
+    }
   }
+    @media screen and (max-width: 750px) {
+      width:100vw;
+      height:auto;
+      padding-bottom: 1vh;
+    }
 `;
 
 const CheckCircle = styled.div`
@@ -69,6 +97,22 @@ const CheckCircle = styled.div`
       border: 1px solid #38d9a9;
       color: #38d9a9;
     `}
+
+    @media screen and (max-width: 750px) {
+      width:7vw;
+      height:7vw;
+      margin-right:10vw;
+      margin-left:2vw;
+      margin-top:1vh;
+    }
+
+    @media screen and (max-width: 499px) {
+      width:8vw;
+      height:8vw;
+      margin-right:10vw;
+      margin-left:2vw;
+      margin-top:1vh;
+    }
 `;
 
 const Text = styled.div`
@@ -83,6 +127,15 @@ const Text = styled.div`
     css`
       color: #ced4da;
     `}
+
+    @media screen and (max-width: 750px) {
+      padding-top:1vh;
+      font-size: 2.8vh;
+    }
+
+    @media screen and (max-width: 499px) {
+      flex-basis: 45vw;
+    }
 `;
 
 console.log('TodoItem Here');

@@ -32,6 +32,22 @@ const CircleButton = styled.button`
       }
       transform: translate(-50%, 50%) rotate(45deg);
     `}
+
+    @media screen and (max-width: 750px) {
+      width: 13vw;
+      height: 13vw;
+      bottom: 13vh;
+      left:50%;
+      transform: transformX(-50%);
+    }
+
+    @media screen and (max-width: 499px) {
+      width: 20vw;
+      height: 20vw;
+      bottom: 11vh;
+      left:50%;
+      transform: transformX(-50%);
+    }
 `;
 
 const Circle = styled.button`
@@ -69,14 +85,42 @@ z-index: 1;
       transform: translate(-50%, 50%) rotate(45deg);
       
     `}
+
+    @media screen and (max-width: 750px) {
+      width: 13vw;
+      height: 36.5vh;
+      border-radius: 5vh;
+      left:43.5%;
+      transform: transformX(-50%);
+      margin-left:0;
+      bottom: -17.3vh;
+    }
+
+    @media screen and (max-width: 499px) {
+      width: 20vw;
+      left:40%;
+      height: 26vh;
+      bottom: -10.3vh;
+    }
 `;
 const InsertFormPositioner = styled.div`
-  width: 100%;
+  width: 87vw;
   height: 26vh;
   bottom: 0;
   left:8vw;
   position: fixed;
   background-color:#f8f9fa;
+
+  @media screen and (max-width: 750px) {
+    width: 100vw;
+    height: 35vh;
+    border-radius: 5vw;
+    left:0;
+    bottom:5vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: transformX(-50%);
+    margin-left:0;
+  }
 `;
 
 const InsertFormbg = styled.div`
@@ -86,12 +130,11 @@ const InsertFormbg = styled.div`
   left:0;
   background: rgba(0, 0, 0, 0.3);
   position:fixed;
-
 `;
 
 const InsertForm = styled.form`
   background: #f8f9fa;
-  height: 26vh;
+  height: 5vh;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   border-top: 1px solid #e9ecef;
@@ -99,8 +142,8 @@ const InsertForm = styled.form`
 
 const Input = styled.input`
   padding: 1vw;
-  margin-left:12vw;
-  margin-top:8vh;
+  margin-left:9vw;
+  margin-top:9vh;
   border-radius: 4px;
   border: 1px solid #dee2e6;
   width: 70vw;
