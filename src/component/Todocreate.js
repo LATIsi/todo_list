@@ -141,6 +141,7 @@ const InsertForm = styled.form`
 `;
 
 const Input = styled.input`
+  position: absolute;
   padding: 1vw;
   margin-left:9vw;
   margin-top:9vh;
@@ -150,6 +151,19 @@ const Input = styled.input`
   outline: none;
   font-size: 18px;
   box-sizing: border-box;
+
+
+  @media screen and (max-width: 750px) {
+    margin-left:0;
+    margin-top:9vh;
+    width: 80vw;
+    height: 7vh;
+    font-size: 2.5vh;
+    border-radius: 4vw;
+    padding: 2vw;
+    left:50%;
+    transform: translateX(-50%);
+  }
 `;
 
 function TodoCreate() {
